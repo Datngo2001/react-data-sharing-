@@ -28,9 +28,9 @@ const reducer = (
 const store = createStore(reducer);
 
 // Custom Hook
-const useSharedState = () => {
+const useSharedState = () : [string, React.Dispatch<React.SetStateAction<string>>] => {
   const [data, setData] = useState('Shared Data via Custom Hook');
-  return { data, setData };
+  return [ data, setData ];
 };
 
 // Event Bus Setup
